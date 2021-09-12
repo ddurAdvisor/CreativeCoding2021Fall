@@ -1,5 +1,4 @@
-Creative coding is a different discipline than programming systems. The goal is to create something expressive instead of something functional. **Interaction design**, **information visualization** and **generative art** are all different types of creative coding – which has become a household term describing **artworks articulated as code**.
-
+创意编程是一个不同于典型计算机编程体系的领域，其在于创造一些有具有创意/艺术表现力的东西，而非为了实现某种类似于人脸识别一类一般意义上的功能性。设计领域中一些经常被提及的**交互设计**、**信息可视化**和**生成艺术**之类的术语所涉及的内涵和外延都可以被认为是创意编程的不同形式，即**以代码为表现形式/表达方式的艺术作品**。
 
 ## Contents
 
