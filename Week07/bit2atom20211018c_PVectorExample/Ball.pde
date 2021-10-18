@@ -1,3 +1,12 @@
+/*
+* @Author: bit2atom | SJTU-ChinaGold DesignIntelligence
+* @Email:  zhanglliqun@gmail.com
+* @Date:   2021-10-18 13:14:00
+* @brief
+* @Last Modified by:   bit2atommac2019
+* @Last Modified time: 2021-10-18 14:33:11
+* @detail
+*/
 class Ball {
   //float positionX, positionY;
   PVector position;
@@ -6,7 +15,13 @@ class Ball {
   PVector speed;
   float attractionIndex = 10;
 
-
+/**
+ * [Ball description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:39+0800
+ * @param    {[type]}                 PVector p [description]
+ * @param    {[type]}                 float   d [description]
+ */
   Ball(PVector p, float d) {
     position = p;
     dd = d;
@@ -14,6 +29,12 @@ class Ball {
     speed = new PVector(random(-1, 1), random(-1, 1));
   }
 
+/**
+ * [run description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:44+0800
+ * @return   {[type]}                 [description]
+ */
   void run() {
     move();
     collision();
@@ -23,10 +44,22 @@ class Ball {
     speed.limit(5);
   }
 
+/**
+ * [move description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:51+0800
+ * @return   {[type]}                 [description]
+ */
   void move() {
     position.add(speed);
   }
 
+/**
+ * [collision description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:55+0800
+ * @return   {[type]}                 [description]
+ */
   void collision() {
     for (Ball tb : myBalls) {
       float d = PVector.dist(tb.position, this.position);
@@ -39,6 +72,12 @@ class Ball {
     }
   }
 
+/**
+ * [mouseAttraction description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:59+0800
+ * @return   {[type]}                 [description]
+ */
   void mouseAttraction() {
     PVector m = new PVector(mouseX, mouseY);
     float d = PVector.dist(m, position);
@@ -48,6 +87,12 @@ class Ball {
     speed.add(attr);
   }
 
+/**
+ * [egde description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:33:03+0800
+ * @return   {[type]}                 [description]
+ */
   void egde() {
     if (position.x > width - dd/2) {
       position.x = width - dd/2;
@@ -68,6 +113,12 @@ class Ball {
     }
   }
 
+/**
+ * [showBall description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:33:09+0800
+ * @return   {[type]}                 [description]
+ */
   void showBall() {
     stroke(0);
     fill(bC);

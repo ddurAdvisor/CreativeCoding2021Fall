@@ -1,3 +1,12 @@
+/*
+* @Author: bit2atom | SJTU-ChinaGold DesignIntelligence
+* @Email:  zhanglliqun@gmail.com
+* @Date:   2021-10-18 14:09:14
+* @brief
+* @Last Modified by:   bit2atommac2019
+* @Last Modified time: 2021-10-18 14:33:27
+* @detail
+*/
 Ball[] myBalls;
 int totalNum = 20;
 
@@ -7,6 +16,12 @@ void setup() {
   initiate();
 }
 
+/**
+ * [initiate description]
+ * @Author   bit2atom
+ * @DateTime 2021-10-18T14:32:26+0800
+ * @return   {[type]}                 [description]
+ */
 void initiate() {
   myBalls = new Ball[totalNum];
   for (int i = 0; i < myBalls.length; i ++) {
